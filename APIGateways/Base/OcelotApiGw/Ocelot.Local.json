@@ -1,0 +1,40 @@
+{
+  "Routes": [
+    { //CatalogAPI
+      "DownStreamPathTemplase": "api/Catalog",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8000"
+        }
+      ],
+      "UpStreamPathTemplate": "/Catalog",
+      "UpStreamHttpMethode": [ "GET", "POST", "PUT" ]
+    },
+    {
+      "DownStreamPathTemplase": "api/Catalog{id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8000"
+        }
+      ],
+      "UpStreamPathTemplate": "/Catalog/{id}",
+      "UpStreamHttpMethode": [ "GET", "DELETE" ]
+    },
+    {
+      "DownStreamPathTemplate": "/Catalog/GetProductByCategory/{category}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "8000"
+        }
+      ],
+      "UpStreamPathTemplate": "/Catalog/GetProductByCategory/{category}",
+      "UpStreamHttpMethod": ["GET"]
+    }
+  ]
+}
