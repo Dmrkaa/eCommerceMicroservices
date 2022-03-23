@@ -9,7 +9,7 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartAPI", "BasketAPI\CartAPI.csproj", "{4524E77E-7DE9-41C0-BA0A-FE7202301A26}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscountAPI", "Discount\DiscountAPI.csproj", "{AB467CCE-55B0-4AA1-9E04-DFC62E4832EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscountAPI", "Discount\DiscountAPI\DiscountAPI.csproj", "{AB467CCE-55B0-4AA1-9E04-DFC62E4832EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIGeteways", "APIGeteways", "{41492B60-C172-40BB-817C-4C3F7F9BD1DE}"
 EndProject
@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Ord
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "Ordering\Ordering.Domain\Ordering.Domain.csproj", "{6746B3C9-9F99-4C69-807D-83F8D7978B46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{5C84C5D9-B410-4F25-A026-F4654FD97C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{5C84C5D9-B410-4F25-A026-F4654FD97C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{7755ED67-AA04-4431-9A0A-34CD0D1FBC7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -82,6 +84,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{AB467CCE-55B0-4AA1-9E04-DFC62E4832EB} = {7755ED67-AA04-4431-9A0A-34CD0D1FBC7C}
 		{11AE4D38-13F4-47E0-9201-56FF4125CC8E} = {41492B60-C172-40BB-817C-4C3F7F9BD1DE}
 		{A71137EA-C03A-4757-BDAA-24640FE01F88} = {11AE4D38-13F4-47E0-9201-56FF4125CC8E}
 		{AE44F696-D341-4FAA-B7AF-B557D0FB8285} = {D53A9AA6-C8A0-4A4D-B34D-03C5DCB4B0A1}
