@@ -48,7 +48,8 @@ namespace CatalogAPI.Services.Repositories
 
         public async Task<IEnumerable<Product>> GetProducts()
         {
-            return await _context.Products.Find(x => true).ToListAsync();
+            var result = await _context.Products.FindAsync(x => true);
+            return await result.ToListAsync();
         }
 
         public async Task<bool> UpdateProduct(Product product)

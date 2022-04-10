@@ -32,7 +32,25 @@ namespace CatalogAPI.Controllers
             return Ok(products);
         }
 
-        [HttpGet("{id}", Name = "GetProduct")]
+
+        [HttpGet("ByName/{name}", Name = "GetProductByName")]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<Product>> GetProductByName(string name)
+        {
+            var product = await _productRepository.GetProductByName(name);
+
+            if (product == null)
+            {
+                _logger.LogError($"Product with id: {name}, not found.");
+                return NotFound();
+            }
+
+            return Ok(product);
+        }
+
+
+        [HttpGet("{id}", Name = "GetProductById")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> GetProductById(string id)
